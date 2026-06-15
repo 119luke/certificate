@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print Your Certificate of Completion</title>
+<style>
+  :root { --navy: #1a3a6e; --gold: #d4a017; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; background: #f5f8fc; color: #2c2c2c;
+    display: flex; justify-content: center; padding: 24px 16px;
+  }
+  .card {
+    background: #fff; max-width: 560px; width: 100%;
+    border-radius: 16px; padding: 36px 28px;
+    box-shadow: 0 6px 24px rgba(26, 58, 110, .12);
+    text-align: center;
+  }
+  .trophy { font-size: 56px; margin: 0; }
+  h1 { color: var(--navy); font-size: 28px; margin: 12px 0 4px; }
+  .book-title { color: var(--gold); font-size: 20px; font-weight: 700; margin: 0 0 18px; }
+  p { line-height: 1.5; }
+  .name-field { margin: 18px 0 4px; text-align: left; }
+  .name-field label { display: block; font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 6px; }
+  .name-field input {
+    width: 100%; font-size: 17px; padding: 12px 14px;
+    border: 2px solid #cdd7e6; border-radius: 10px; outline: none;
+  }
+  .name-field input:focus { border-color: var(--navy); }
+  .kit-form { margin: 16px 0 6px; }
+  #continue {
+    display: none; margin-top: 18px;
+  }
+  #continue a {
+    display: inline-block; background: var(--navy); color: #fff;
+    text-decoration: none; font-weight: 700; font-size: 18px;
+    padding: 14px 28px; border-radius: 10px;
+  }
+  .fine-print { font-size: 12px; color: #888; margin-top: 22px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <p class="trophy">🏆</p>
+    <h1>Congratulations!</h1>
+    <p class="book-title" id="bookTitle">You finished your workbook!</p>
+    <p>That's a big achievement worth celebrating. Enter the child's name and your
+       email below, and we'll unlock a <strong>personalized Certificate of
+       Completion</strong> to download — plus you'll be first to hear when a new
+       workbook is <strong>free on Amazon</strong>.</p>
+
+    <div class="name-field">
+      <label for="childName">Child's first name (for the certificate)</label>
+      <input type="text" id="childName" placeholder="e.g. Maya" autocomplete="given-name">
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         PASTE YOUR KIT (CONVERTKIT) FORM EMBED CODE ON THE NEXT LINE.
+         In Kit: Grow → Landing Pages & Forms → your form → Publish → HTML
+         (choose the JavaScript embed — it's a single <script> line).
+         ════════════════════════════════════════════════════════════════ -->
+    <div class="kit-form">
+      <!-- KIT_FORM_EMBED_HERE -->
+    </div>
+
+    <div id="continue">
+      <p><strong>✅ You're in!</strong></p>
+      <a id="certLink" href="certificate.html">🖨️ Get my certificate →</a>
+    </div>
+
+    <p class="fine-print">We only email when there's something genuinely useful —
+       new workbooks, free samples, and practice tips. Unsubscribe anytime.</p>
+  </div>
+
+<script>
+  // Carry the book title from the QR code (?book=…) into the page and onward.
+  const params = new URLSearchParams(window.location.search);
+  const book = params.get("book") || "";
+  if (book) {
+    document.getElementById("bookTitle").textContent = "You finished “" + book + "”!";
+    try { localStorage.setItem("certBook", book); } catch (e) {}
+  }
+
+  // Build the certificate link from the book title + the typed child's name.
+  // Email is captured by the Kit form; the child's name stays client-side and
+  // only personalizes the certificate.
+  function certHref() {
+    const name = (document.getElementById("childName").value || "").trim();
+    try {
+      if (name) localStorage.setItem("certName", name); else localStorage.removeItem("certName");
+    } catch (e) {}
+    const qs = new URLSearchParams();
+    if (book) qs.set("book", book);
+    if (name) qs.set("name", name);
+    const q = qs.toString();
+    return "certificate.html" + (q ? "?" + q : "");
+  }
+
+  // Keep the button link fresh as they type (also covers the no-JS-on-submit case).
+  document.getElementById("childName").addEventListener("input", function () {
+    document.getElementById("certLink").href = certHref();
+  });
+  document.getElementById("certLink").href = certHref();
+
+  // Reveal the certificate button once the Kit form is submitted.
+  // (Kit's embed renders its own <form>; we listen for any form submission.)
+  document.addEventListener("submit", function () {
+    document.getElementById("certLink").href = certHref();
+    setTimeout(function () {
+      document.getElementById("continue").style.display = "block";
+      document.getElementById("continue").scrollIntoView({ behavior: "smooth" });
+    }, 1200);
+  }, true);
+</script>
+</body>
+</html>
