@@ -79,7 +79,7 @@
       </div>
       <p class="completed">has successfully completed every question in</p>
       <p class="book" id="bookName">this workbook</p>
-      <p class="date-line">Date: ______________________</p>
+      <p class="date-line" id="dateLine">Date: ______________________</p>
       <p class="closing">Outstanding work — keep practicing!</p>
     </div>
   </div>
@@ -97,6 +97,11 @@
   const name = val("name", "certName");
 
   if (book) document.getElementById("bookName").textContent = book;
+
+  // Fill in today's date (e.g. "June 12, 2026") instead of a blank line.
+  const today = new Date().toLocaleDateString("en-US",
+    { year: "numeric", month: "long", day: "numeric" });
+  document.getElementById("dateLine").textContent = "Date: " + today;
 
   // Personalize the name line if we have a name; otherwise keep the blank line
   // so a bare scan still produces a fill-in-by-hand certificate.
