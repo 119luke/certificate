@@ -56,9 +56,8 @@
       <input type="text" id="childName" placeholder="e.g. Maya" autocomplete="given-name">
     </div>
 
-<script async data-uid="bba901b9c4" src="https://jaisonb.kit.com/bba901b9c4/index.js"></script>
     <div class="kit-form">
-      <!-- KIT_FORM_EMBED_HERE -->
+      <script async data-uid="bba901b9c4" src="https://jaisonb.kit.com/bba901b9c4/index.js"></script>
     </div>
 
     <div id="continue">
@@ -100,15 +99,19 @@
   });
   document.getElementById("certLink").href = certHref();
 
-  // Reveal the certificate button once the Kit form is submitted.
-  // (Kit's embed renders its own <form>; we listen for any form submission.)
-  document.addEventListener("submit", function () {
+  // Reveal the certificate button once Kit confirms the subscription — it
+  // swaps in a .formkit-alert-success element. (A plain submit listener would
+  // also fire on rejected/invalid emails, handing out the certificate without
+  // capturing the email.)
+  var unlocked = false;
+  new MutationObserver(function () {
+    var ok = document.querySelector(".formkit-alert-success");
+    if (!ok || ok.offsetParent === null || unlocked) return;
+    unlocked = true;
     document.getElementById("certLink").href = certHref();
-    setTimeout(function () {
-      document.getElementById("continue").style.display = "block";
-      document.getElementById("continue").scrollIntoView({ behavior: "smooth" });
-    }, 1200);
-  }, true);
+    document.getElementById("continue").style.display = "block";
+    document.getElementById("continue").scrollIntoView({ behavior: "smooth" });
+  }).observe(document.body, { childList: true, subtree: true, attributes: true });
 </script>
 </body>
 </html>

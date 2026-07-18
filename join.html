@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the List — Free & Discount Promotions</title>
+<style>
+  :root { --navy: #1a3a6e; --gold: #d4a017; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; background: #f5f8fc; color: #2c2c2c;
+    display: flex; justify-content: center; padding: 24px 16px;
+  }
+  .card {
+    background: #fff; max-width: 560px; width: 100%;
+    border-radius: 16px; padding: 36px 28px;
+    box-shadow: 0 6px 24px rgba(26, 58, 110, .12);
+    text-align: center;
+  }
+  .gift { font-size: 56px; margin: 0; }
+  h1 { color: var(--navy); font-size: 26px; margin: 12px 0 18px; line-height: 1.35; }
+  .kit-form { margin: 16px 0 6px; }
+  #continue { display: none; margin-top: 18px; }
+  #continue a {
+    display: inline-block; background: var(--navy); color: #fff;
+    text-decoration: none; font-weight: 700; font-size: 18px;
+    padding: 14px 28px; border-radius: 10px;
+  }
+  .fine-print { font-size: 12px; color: #888; margin-top: 22px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <p class="gift">🎁</p>
+    <h1>Join the list to learn as soon as we launch FREE and discount promotions</h1>
+
+    <div class="kit-form">
+      <script async data-uid="bba901b9c4" src="https://jaisonb.kit.com/bba901b9c4/index.js"></script>
+    </div>
+
+    <div id="continue">
+      <p><strong>✅ You're in!</strong></p>
+      <a href="thankyou.html">📚 See our books →</a>
+    </div>
+
+    <p class="fine-print">We only email when there's something genuinely useful —
+       free promo days, discounts, and new releases. Unsubscribe anytime.</p>
+  </div>
+
+<script>
+  // The Kit form is shared with the certificate page, where its button says
+  // "Unlock my certificate". Relabel it here once the embed renders.
+  var relabel = setInterval(function () {
+    var btn = document.querySelector(".kit-form button, .kit-form [type=submit]");
+    if (btn) {
+      var label = btn.querySelector("span") || btn;
+      label.textContent = "Join the list";
+      clearInterval(relabel);
+    }
+  }, 300);
+  setTimeout(function () { clearInterval(relabel); }, 15000);
+
+  // The Kit embed renders its own <form> (email box + button). Redirect only
+  // once Kit confirms the subscription — it swaps in a .formkit-alert-success
+  // element. (A plain submit listener would also fire on rejected/invalid
+  // emails and send people onward without ever joining the list.)
+  var sent = false;
+  function onSuccess() {
+    if (sent) return;
+    sent = true;
+    document.getElementById("continue").style.display = "block";
+    setTimeout(function () { window.location.href = "thankyou.html"; }, 900);
+  }
+  new MutationObserver(function () {
+    var ok = document.querySelector(".formkit-alert-success");
+    if (ok && ok.offsetParent !== null) onSuccess();
+  }).observe(document.body, { childList: true, subtree: true, attributes: true });
+</script>
+</body>
+</html>
