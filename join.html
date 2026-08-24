@@ -68,7 +68,7 @@
     </ul>
 
     <div class="kit-form">
-      <script async data-uid="bba901b9c4" src="https://jaisonb.kit.com/bba901b9c4/index.js"></script>
+      <script async data-uid="cd154a6350" src="https://jaisonb.kit.com/cd154a6350/index.js"></script>
     </div>
 
     <div id="continue">
@@ -87,18 +87,6 @@
   </div>
 
 <script>
-  // The Kit form is shared with the certificate page, where its button says
-  // "Unlock my certificate". Relabel it here once the embed renders.
-  var relabel = setInterval(function () {
-    var btn = document.querySelector(".kit-form button, .kit-form [type=submit]");
-    if (btn) {
-      var label = btn.querySelector("span") || btn;
-      label.textContent = "Send me the free book";
-      clearInterval(relabel);
-    }
-  }, 300);
-  setTimeout(function () { clearInterval(relabel); }, 15000);
-
   // Kit swaps in .formkit-alert-success once the subscription is accepted.
   // Do NOT redirect on success: delivery happens through Kit's confirmation
   // email (double opt-in), so the reader must go to their inbox, not onward.
