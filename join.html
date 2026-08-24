@@ -44,6 +44,17 @@
     text-decoration: none; font-weight: 700; font-size: 15px;
     padding: 11px 22px; border-radius: 9px;
   }
+  .spam-hint {
+    font-size: 13.5px; line-height: 1.6; color: #5a6472;
+    background: #fffaf0; border: 1px solid #f0e0b8; border-radius: 10px;
+    padding: 12px 14px; margin: 14px auto 0; max-width: 460px; text-align: left;
+  }
+  .spam-hint strong { color: #8a6100; }
+  .spam-alert {
+    font-size: 14.5px; line-height: 1.6; color: #7a4a00;
+    background: #fff5e0; border: 1px solid #f0d59a; border-radius: 10px;
+    padding: 12px 14px; margin: 12px 0 4px; text-align: left;
+  }
   .fine-print { font-size: 12px; color: #888; margin-top: 22px; line-height: 1.6; }
 </style>
 </head>
@@ -71,12 +82,22 @@
       <script async data-uid="cd154a6350" src="https://jaisonb.kit.com/cd154a6350/index.js"></script>
     </div>
 
+    <p class="spam-hint">
+      📬 We'll email you a confirmation link straight away.
+      <strong>If it isn't in your inbox within a minute, check your spam
+      or promotions folder</strong> — and mark it "not spam" so the download
+      and future emails reach you.
+    </p>
+
     <div id="continue">
       <h2>✅ Almost there — check your email</h2>
       <p>We've sent you a confirmation email. <strong>Click the button inside it</strong>
          and your PDF downloads straight away.</p>
-      <p style="font-size:13px;color:#6b7280">
-         Nothing in your inbox after a minute? Check spam or promotions.</p>
+      <p class="spam-alert">
+        ⚠️ <strong>Check your spam or promotions folder.</strong>
+        Confirmation emails often land there. Move it to your inbox and mark it
+        "not spam" so your download link and future emails get through.
+      </p>
       <a class="books" href="thankyou.html">Browse all the workbooks →</a>
     </div>
 
