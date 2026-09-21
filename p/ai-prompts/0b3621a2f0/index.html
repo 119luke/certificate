@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cancel something designed to be hard to cancel — 150 AI Prompts That Actually Work</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 138</p>
+  <h1>Cancel something designed to be hard to cancel</h1>
+  <p class="section">Contracts, Letters and Legal Paperwork · 150 AI Prompts That Actually Work</p>
+  <div class="prompt" id="prompt">Here are the terms of a [subscription, contract, membership] I want to cancel with [company]: [paste the terms, or the cancellation section]. My account reference is [reference] and I started on [date]. First, tell me from these terms only: how cancellation must be made, any notice period, the earliest date it can take effect, and whether any fee or final payment applies. Quote the wording. Second, write me a short cancellation message I can send that states I am canceling, gives my reference, states the effective date under their own terms, instructs them to stop taking payment, and requests written confirmation within [number] days. Mark anything the terms do not actually cover.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>150 AI Prompts That Actually Work</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Write a cold message that gets a reply instead of a delete — 150 AI Prompts That Actually Work</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 122</p>
+  <h1>Write a cold message that gets a reply instead of a delete</h1>
+  <p class="section">Making Money · 150 AI Prompts That Actually Work</p>
+  <div class="prompt" id="prompt">Write a cold outreach message to [name and role] at [company]. Here is the real, specific thing I noticed about their work: [paste the detail — a post, a launch, a problem they mentioned]. Here is what I do: [one sentence]. Rules: under 120 words, no flattery, no &#x27;I hope this finds you well&#x27;, no paragraph about my passion. Open with the specific detail, one sentence on why that makes me relevant, then one ask that takes them under two minutes to answer. Do not invent any fact about them that I have not given you. Give me three versions with different opening lines and a subject line for each, under seven words.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>150 AI Prompts That Actually Work</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>

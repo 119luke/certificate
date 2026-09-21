@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Feed yourself properly for a week on a set budget — 150 AI Prompts That Actually Work</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 103</p>
+  <h1>Feed yourself properly for a week on a set budget</h1>
+  <p class="section">Health, Fitness and Food · 150 AI Prompts That Actually Work</p>
+  <div class="prompt" id="prompt">Plan seven days of meals for [number] people on a total budget of [amount and currency], shopping at [supermarket or type of shop] in [country or region]. I have [list your equipment, e.g. oven, hob, freezer, no microwave] and about [number] minutes to cook on weeknights. Include [breakfast/lunch/dinner — say which]. Design it so ingredients are reused across at least three meals to cut waste, and repeat lunches if that saves money. Show each day&#x27;s meals, an estimated cost per meal and the running total, and flag the five items most likely to push me over budget so I can check their real prices.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>150 AI Prompts That Actually Work</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>

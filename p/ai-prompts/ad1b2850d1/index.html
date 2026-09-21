@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Turn an hour-long meeting into who does what by when — 150 AI Prompts That Actually Work</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 055</p>
+  <h1>Turn an hour-long meeting into who does what by when</h1>
+  <p class="section">Work and Productivity · 150 AI Prompts That Actually Work</p>
+  <div class="prompt" id="prompt">Here is the transcript of a [length] meeting about [subject]. [paste transcript] Extract only the commitments. Give me a table with four columns: action, owner, deadline, and the quote it comes from. Use the exact speaker label from the transcript and never guess a name that isn&#x27;t there. Then, separately: (1) actions agreed with nobody assigned, (2) actions with an owner but no date, (3) vague commitments like &#x27;look into it&#x27; or &#x27;circle back&#x27;, written out so I can chase them, and (4) decisions that were made but require no action. Ignore discussion that led nowhere. If something is ambiguous, list it under &#x27;needs confirming&#x27; rather than deciding what it meant.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>150 AI Prompts That Actually Work</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>
