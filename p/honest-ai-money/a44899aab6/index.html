@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pricing analysis — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 034</p>
+  <h1>Pricing analysis</h1>
+  <p class="section">Chapter 9: Money Mechanics · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">I offer this service: [describe your service, deliverables, and typical client]. My current price is [your price] per [project/month/hour]. My costs to deliver (tools, subscriptions, time at my target hourly rate of $[X]/hour) total roughly $[Y] per [project/month/hour]. Analyze my pricing: (1) Is my margin healthy after costs? (2) What would a good-better-best tier structure look like for this service — suggest three tiers with prices and what&#x27;s included in each. (3) Give me three specific signals that would tell me it&#x27;s time to raise prices. (4) Draft the exact message I should send existing clients when I raise my rates, keeping it professional and brief. Be direct — if I&#x27;m undercharging, say so and show me the math.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

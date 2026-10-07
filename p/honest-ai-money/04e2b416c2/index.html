@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The ideation partner — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 019</p>
+  <h1>The ideation partner</h1>
+  <p class="section">Chapter 5: The Content Business · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">I create content about [your niche] for [your audience]. Here are my last 5 pieces and how they performed: [list titles + what happened — views, replies, shares, crickets]. Analyze the pattern: what topics and formats got real engagement versus what flopped? Then give me 10 new content ideas based on what worked, each with a working title and a two-sentence angle. For each idea, flag whether it&#x27;s aimed at attracting NEW audience or deepening trust with EXISTING audience. Be honest if the pattern suggests I should change direction.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

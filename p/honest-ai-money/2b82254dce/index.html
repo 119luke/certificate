@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Build your raise case — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 027</p>
+  <h1>Build your raise case</h1>
+  <p class="section">Chapter 7: AI + Your Day Job · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">Help me prepare for a salary negotiation. My current salary is [amount], my role is [title], and I&#x27;ve been here [duration]. Here are my key accomplishments this year: [paste 3-5 items from your wins file]. Here is what I&#x27;ve found about market pay for my role: [paste what you found from job postings or salary sites]. Draft: (1) a 60-second opening statement for the conversation, (2) responses to the three most likely pushbacks (&quot;budget is tight,&quot; &quot;let&#x27;s revisit next year,&quot; &quot;that&#x27;s above our band&quot;), and (3) three questions I should ask if the answer is no, so I leave with a path forward instead of just a rejection. Keep the tone confident but collaborative.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tax-prep checklist builder — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 036</p>
+  <h1>Tax-prep checklist builder</h1>
+  <p class="section">Chapter 9: Money Mechanics · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">I am a self-employed [freelancer / digital product seller / content creator] in [US state or country]. I started earning income in [month/year]. I am NOT asking for tax advice — I want a preparation checklist. List everything I should organize before meeting a tax professional for the first time: documents to gather, records to compile, questions to ask them, and common first-year mistakes to avoid. Also list the general deadlines I should be aware of for estimated payments in my location (flag anything you&#x27;re unsure about so I can verify it). Remind me at the end that I need a qualified professional for advice specific to my situation.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

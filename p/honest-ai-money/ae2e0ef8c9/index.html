@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The chain runner — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 010</p>
+  <h1>The chain runner</h1>
+  <p class="section">Chapter 3: Prompt Engineering That Actually Earns · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">I&#x27;m going to give you a writing project. Run it as a five-stage chain and do not skip ahead.
+
+STAGE 1 — RESEARCH: When I describe the project, gather the key facts first. List them as bullets. Flag anything you&#x27;re not confident about so I can verify it. Do not write anything yet — wait for my approval.
+
+STAGE 2 — OUTLINE: After I approve the research, build a detailed outline. Do not draft — wait for approval.
+
+STAGE 3 — DRAFT: After I approve the outline, draft one section at a time and stop after each for my feedback.
+
+STAGE 4 — CRITIQUE: When I say &quot;critique,&quot; evaluate the draft against the goal I&#x27;ll give you. List every issue with specific locations. Do not rewrite yet.
+
+STAGE 5 — POLISH: When I say &quot;polish,&quot; fix every issue from the critique.
+
+Acknowledge you understand the five stages, then ask me for the project details.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

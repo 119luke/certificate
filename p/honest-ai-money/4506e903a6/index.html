@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Your skills-to-income fit — The Honest AI Money Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Prompt 001</p>
+  <h1>Your skills-to-income fit</h1>
+  <p class="section">Chapter 1: The Honest Math · The Honest AI Money Guide</p>
+  <div class="prompt" id="prompt">I want an honest assessment of which AI income lane fits me best. Here is my background: [describe your job history, skills, and interests in 3-5 sentences]. Here is my situation: I can commit [X] hours per week, I need my first income within [timeframe], and I am [comfortable / uncomfortable] with direct sales. The four lanes I&#x27;m considering are: (1) freelancing with AI, (2) content creation, (3) digital products, (4) AI services for local businesses. For each lane, give me: a fit score from 1-10 for my situation, the biggest advantage I&#x27;d have, the biggest obstacle I&#x27;d face, and one concrete first step. Then recommend the single best lane for me and explain why in two sentences. Be direct — don&#x27;t flatter me.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into ChatGPT, Gemini, Claude or whichever assistant you use.</p>
+</main>
+<p class="foot">From <em>The Honest AI Money Guide</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>
