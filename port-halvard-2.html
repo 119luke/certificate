@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Port Halvard PD Case File: The Quiet House</title>
+<meta name="description" content="The online case file for The Quiet House, a Detective Maren Holt thriller by Reena Luiz. A work of fiction.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b0f14; --panel: #131a22; --line: #24303c; --text: #d9e2e8; --muted: #8fa3b0; --amber: #FFB020; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
+  .band { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .14em; color: var(--amber); font-size: 15px; margin: 0; }
+  h1, h2 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: .02em; line-height: 1; color: #fff; }
+  h1 { font-size: clamp(44px, 11vw, 76px); margin: 6px 0 4px; }
+  h2 { font-size: 34px; margin: 0 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 22px; font-style: italic; }
+  .stamp { display: inline-block; border: 2px solid var(--amber); color: var(--amber); padding: 2px 10px;
+            font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .12em; transform: rotate(-2deg); }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 20px; margin: 22px 0; }
+  .warn { border-color: var(--amber); }
+  .vote { display: block; width: 100%; text-align: left; margin: 8px 0; padding: 12px 14px; background: #0e141b; color: var(--text);
+           border: 1px solid var(--line); border-radius: 8px; font: inherit; cursor: pointer; }
+  .vote:hover, .vote[aria-pressed="true"] { border-color: var(--amber); color: #fff; }
+  .reply { margin-top: 14px; padding: 14px 16px; border-left: 3px solid var(--amber); background: #0e141b; }
+  .reply p { margin: 0 0 10px; }
+  .said { font-family: "Bebas Neue", Impact, sans-serif; color: var(--amber); letter-spacing: .08em; font-size: 20px; }
+  figure { margin: 16px 0; }
+  figure img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); display: block; background: #fff; }
+  figcaption { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
+  .cta { display: inline-block; margin-top: 12px; background: var(--amber); color: #120c02; text-decoration: none;
+          font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .08em; font-size: 22px; padding: 8px 18px; border-radius: 6px; }
+  .cta:hover { background: #fff; }
+  .note { color: var(--muted); font-size: 14.5px; }
+  .logs { width: 100%; border-collapse: collapse; font: 13px/1.4 Menlo, Consolas, monospace; }
+  .logs th { text-align: left; color: var(--amber); font-family: "Bebas Neue", Impact, sans-serif; font-size: 18px; letter-spacing: .06em;
+              font-weight: 400; border-bottom: 1px solid var(--line); padding: 6px 4px; }
+  .logs td { border-bottom: 1px solid #1b242e; padding: 5px 4px; vertical-align: top; }
+  .logs td.t { white-space: nowrap; color: var(--muted); }
+  .logs .none { color: #4d5d69; font-style: italic; }
+  .scroll { max-height: 520px; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+  label { font-size: 15px; color: var(--muted); }
+  code { font: 14px Menlo, Consolas, monospace; color: #fff; background: #0e141b; padding: 1px 5px; border-radius: 4px; }
+  footer { color: var(--muted); font-size: 13.5px; text-align: center; margin-top: 36px; line-height: 1.7; }
+  a { color: var(--amber); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="band">Port Halvard Police Department · Case # PHPD-27-00388</p>
+  <h1>The Quiet House</h1>
+  <p class="sub">A Detective Maren Holt Thriller by Reena Luiz · Book 2 · a work of fiction</p>
+  <span class="stamp">Case file · Reader access</span>
+
+  <section class="warn">
+    <h2>Before you go further</h2>
+    <p>This file follows the book. The first vote is for readers who've reached the end of Chapter 21; the second, Chapter 31.
+    Nothing on this page names the killer. Everything here is fiction: Port Halvard, Garnet Hill and everyone in them are made up.</p>
+  </section>
+
+  <section>
+    <h2>Is it real?</h2>
+    <p>You've seen the clip. Port Halvard has made up its mind. Is Maren Holt lying?</p>
+    <figure>
+      <img src="phpd2/clip-still.jpg" alt="Still from the clip: a woman at a kitchen table with a glass of red wine, looking up into the camera; a small clock over the range is circled" loading="lazy">
+      <figcaption>Exhibit 7. Frame 244 of 360. Sarada's marker on the printout.</figcaption>
+    </figure>
+    <button class="vote" data-target="r-real-yes">It&#x27;s real. She did it.</button>
+<button class="vote" data-target="r-real-no">It&#x27;s fake. She didn&#x27;t.</button>
+<button class="vote" data-target="r-real-unsure">I can&#x27;t tell, and that scares me</button>
+<div class="reply" id="r-real-yes" hidden><p class="said">You said: It&#x27;s real. She did it.</p><p>Lieutenant Dana Kessler doesn't look up from the printout on her desk. She's holding a chewed blue pen.</p>
+<p>"Then you're where half this building was at eight o'clock Monday morning." She turns a page. "Her face. Her voice. Her kitchen. Her case. If I'd never met Maren Holt, I'd say the same." She sets the pen down, exactly parallel to the edge of the desk. "I have met her. That's the problem with evidence, isn't it? It doesn't care who you've met." A pause. "Keep your eye on the clock. Any clock. I'm told that's where they always slip."</p></div>
+<div class="reply" id="r-real-no" hidden><p class="said">You said: It&#x27;s fake. She didn&#x27;t.</p><p>Travis Ward wipes his hands on a red shop rag and doesn't look at you.</p>
+<p>"Yeah? How do you know?" He waits. "That's what I'd like to know. Because five years ago, nobody in that courtroom knew. They looked at my face on a screen and they were sure." He tosses the rag on the bench. "You're right, by the way. I'm just asking you to notice you don't have any proof yet. You've got a feeling about a person." He almost smiles. "Welcome to my side of the table. It's cold over here."</p></div>
+<div class="reply" id="r-real-unsure" hidden><p class="said">You said: I can&#x27;t tell, and that scares me</p><p>Sarada Nair has her sleeves pulled down over her hands and three monitors going.</p>
+<p>"Good," she says. "That's the right answer. That's the only honest answer anybody's given me all week." She drags a cursor across a frame, back and forth. "Everybody who's sure is guessing. They're just guessing loud." She stops on one frame and leans in. "I can't tell either, from the face. Nobody can anymore. So stop looking at the face. Look at everything around it. The face is the part they worked hardest on."</p></div>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+  </section>
+
+  <section>
+    <h2>Make your call</h2>
+    <p>Maren thinks she knows who killed Judge Margaret Tollefsen. Do you?</p>
+    <button class="vote" data-target="c-vote-erik">Erik Tollefsen</button>
+<button class="vote" data-target="c-vote-cora">Cora Dumalag</button>
+<button class="vote" data-target="c-vote-nick">Nick Petrakis</button>
+<button class="vote" data-target="c-vote-craig">Craig Nyberg</button>
+<button class="vote" data-target="c-vote-maren">Maren Holt</button>
+<button class="vote" data-target="c-vote-someone-else">Someone else</button>
+<div class="reply" id="c-vote-erik" hidden><p class="said">You said: Erik Tollefsen</p><p>Lieutenant Dana Kessler peels a clementine in one long spiral.</p>
+<p>"The son. Ninety thousand in debt, a million-three house, an app that says he silenced his mother's alarm while she lay dying, and a story that changed between Wednesday and Thursday." She eats a segment. "Debt and a silenced alert. I've closed cases on less." She wipes her fingers. "Of course, he was in Olympia, and the house has been lying about everything else. So if the house lied about him too, you'll want something better than an app."</p></div>
+<div class="reply" id="c-vote-cora" hidden><p class="said">You said: Cora Dumalag</p><p>Detective Rick Haugen leans back in his chair until it creaks, and offers you a cough drop.</p>
+<p>"The nurse. Yeah. Forty grand in the will, a code to the door, she found the body and touched it and pushed in a chair, and she lied to us about who came to the house." He unwraps one for himself. "Nurses know how to make things look natural. I hate that I said that. She fed me lumpia." He sighs. "There's a church full of people who saw her from seven to eleven. Work around that and I'm listening."</p></div>
+<div class="reply" id="c-vote-nick" hidden><p class="said">You said: Nick Petrakis</p><p>Detective Ron Pelletier puts down his Diet Pepsi at a volume that turns heads.</p>
+<p>"PETRAKIS! I like it! He lied to everybody, he was in the house, his truck sat down the block with the engine running, and if that judge reopens Ward, guess who everybody looks at for his brother?" He leans in, and drops to merely loud. "Here's my problem. He pays his beer guy by check. He's got a flip phone. Somebody rewrote that house's memory at three in the morning from a console. Show me Nick Petrakis at a console."</p></div>
+<div class="reply" id="c-vote-craig" hidden><p class="said">You said: Craig Nyberg</p><p>Sarada Nair doesn't look up from her laptop.</p>
+<p>"Okay." A long pause. "Okay. He lied about Christmas. He's got a scratch and a story about salting his steps. He tried the Ward case. And there's a C on a card behind the pies." She types something and deletes it. "Then you need more than a scratch. You need him in that kitchen at ten to eight, and right now all I can put in that kitchen is a lock that says SVC." She finally looks up. "Find out what SVC means. Not what somebody told you it means."</p></div>
+<div class="reply" id="c-vote-maren" hidden><p class="said">You said: Maren Holt</p><p>Detective Rick Haugen laughs so hard he has to put his coffee down.</p>
+<p>"Bold. I like you." He wipes his eyes. "Look, I get it. Her face on TV saying she framed Ward, the judge who was about to reopen Ward dead at the bottom of her stairs, and Maren's initials on the calendar. If I didn't know her, I'd look too." He picks the coffee back up. "But I checked the sign-in sheet. Bethel Lutheran, Tuesday, 7:20 to 8:45, in her own handwriting, sitting with her dad in the dark. Try again, Detective."</p></div>
+<div class="reply" id="c-vote-someone-else" hidden><p class="said">You said: Someone else</p><p>Walt Holt is having a good day. He folds the Herald to the Jumble and taps it with his pen.</p>
+<p>"Someone else. Huh." He thinks about it. "Your mother used to say, when something went missing in the house, don't look for a burglar. Look for who was supposed to be there." He holds up one big finger. "It's always somebody who was supposed to be there. The one nobody wrote down, because why would you? They're always around." He goes back to his Jumble. "Go stand where it happened, Mare. Shoe leather."</p></div>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+  </section>
+
+  <section>
+    <h2>Two records, one evening</h2>
+    <p>Tuesday, January 19. On the left, what the Hearthline cloud said happened in the house (Exhibit 2). On the right,
+    what the little box in the hall closet wrote down for itself while the power was out (Exhibit 8), merged by time.
+    Two honest records of the same evening would line up. These almost never do.</p>
+    <div class="scroll">
+      <table class="logs" id="logs">
+        <thead><tr><th>Time</th><th>The cloud</th><th>The box in the closet</th></tr></thead>
+        <tbody>
+<tr class="same"><td class="t">18:31:44</td><td><b>LOCK-FRONT</b> Locked (Code 2)</td><td><b>LOCK-FRONT</b> Locked (Code 2)</td></tr>
+<tr class="diff"><td class="t">18:40:12</td><td><b>LIGHT-KITCH</b> On</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">18:40:51</td><td><span class="none">nothing</span></td><td><b>LIGHT-KITCH</b> On</td></tr>
+<tr class="diff"><td class="t">18:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">18:50:34</td><td><span class="none">nothing</span></td><td><b>LOCK-FRONT</b> Unlocked (manual, interior thumb-turn)</td></tr>
+<tr class="diff"><td class="t">18:50:41</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Opened</td></tr>
+<tr class="diff"><td class="t">18:50:58</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Closed</td></tr>
+<tr class="diff"><td class="t">18:51:20</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">18:51:33</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">18:52:47</td><td><b>MOT-KITCH</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">18:58:09</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">18:58:12</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:00:03</td><td><b>WIN-LIV-1</b> Closed</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:06:29</td><td><b>MOT-KITCH</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:12:08</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Opened</td></tr>
+<tr class="diff"><td class="t">19:12:31</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Closed</td></tr>
+<tr class="diff"><td class="t">19:12:33</td><td><span class="none">nothing</span></td><td><b>LOCK-FRONT</b> Locked (manual, interior thumb-turn)</td></tr>
+<tr class="diff"><td class="t">19:14:46</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:21:56</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:22:40</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:24:11</td><td><b>LIGHT-LIV</b> On</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:31:06</td><td><span class="none">nothing</span></td><td><b>HUB</b> MAINS LOST. Battery mode. Uplink unavailable. Buffering.</td></tr>
+<tr class="diff"><td class="t">19:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">19:48:52</td><td><span class="none">nothing</span></td><td><b>LOCK-FRONT</b> Unlocked (SVC)</td></tr>
+<tr class="diff"><td class="t">19:49:10</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Opened</td></tr>
+<tr class="diff"><td class="t">19:49:24</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Closed</td></tr>
+<tr class="diff"><td class="t">19:49:40</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:50:02</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:52:26</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:52:29</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:54:44</td><td><span class="none">nothing</span></td><td><b>DOOR-BSMT</b> Opened</td></tr>
+<tr class="diff"><td class="t">19:54:59</td><td><span class="none">nothing</span></td><td><b>MOT-BSMT</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:55:13</td><td><span class="none">nothing</span></td><td><b>DOOR-BSMT</b> Closed</td></tr>
+<tr class="diff"><td class="t">19:55:31</td><td><span class="none">nothing</span></td><td><b>DOOR-BSMT</b> Opened</td></tr>
+<tr class="diff"><td class="t">19:55:44</td><td><span class="none">nothing</span></td><td><b>MOT-BSMT</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:56:10</td><td><span class="none">nothing</span></td><td><b>MOT-BSMT</b> Motion</td></tr>
+<tr class="diff"><td class="t">19:58:33</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:00:03</td><td><b>WIN-LIV-1</b> Closed</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:01:37</td><td><span class="none">nothing</span></td><td><b>MOT-BSMT</b> Motion</td></tr>
+<tr class="diff"><td class="t">20:03:58</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">20:09:12</td><td><span class="none">nothing</span></td><td><b>MOT-HALL</b> Motion</td></tr>
+<tr class="diff"><td class="t">20:14:52</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:15:30</td><td><b>MOT-KITCH</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:16:40</td><td><span class="none">nothing</span></td><td><b>MOT-KITCH</b> Motion</td></tr>
+<tr class="diff"><td class="t">20:18:21</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Opened</td></tr>
+<tr class="diff"><td class="t">20:18:49</td><td><span class="none">nothing</span></td><td><b>DOOR-FRONT</b> Closed</td></tr>
+<tr class="diff"><td class="t">20:19:05</td><td><span class="none">nothing</span></td><td><b>LOCK-FRONT</b> Locked (SVC, keypad, from outside)</td></tr>
+<tr class="diff"><td class="t">20:31:08</td><td><b>MOT-KITCH</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:33:46</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:34:20</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">20:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:00:03</td><td><b>WIN-LIV-1</b> Closed</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:02:58</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:03:24</td><td><b>MOT-KITCH</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:09:51</td><td><b>LIGHT-KITCH</b> Off</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:10:36</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">21:55:12</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:00:03</td><td><b>WIN-LIV-1</b> Closed</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:26:40</td><td><b>MOT-LIV</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:44:09</td><td><b>LIGHT-LIV</b> Off</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:44:31</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">22:45:02</td><td><b>LIGHT-HALL</b> On</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:00:03</td><td><b>WIN-LIV-1</b> Closed</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:12:57</td><td><b>MOT-HALL</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:39:48</td><td><b>LIGHT-HALL</b> Off</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:40:30</td><td><b>MOT-STAIR</b> Motion</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:41:05</td><td><b>THERM-HALL</b> 68F hold</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:41:17</td><td><b>NOTIFY</b> Sent: Erik T. (app)</td><td><span class="none">nothing</span></td></tr>
+<tr class="diff"><td class="t">23:43:17</td><td><b>ESCALATE</b> Monitoring canceled</td><td><span class="none">nothing</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Times end where the evening does, at midnight. Look at the seconds.</p>
+  </section>
+
+  <section>
+    <h2>The house, from above</h2>
+    <figure>
+      <img src="phpd2/floor-plan.jpg" alt="Installer's floor plan of 418 Garnet Hill Road with every sensor numbered" loading="lazy">
+      <figcaption>Exhibit 14. The installer's device plan. Who could be where?</figcaption>
+    </figure>
+    <figure>
+      <img src="phpd2/vacuum-map.jpg" alt="Robot vacuum map of the hall, kitchen and back hall from its 2:50 a.m. run" loading="lazy">
+      <figcaption>Exhibit 6. The Clerk's 2:50 a.m. run. It went around everything it couldn't explain.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Book 1's hidden fake</h2>
+    <p>If you've read <em>The Second Face</em>, Sarada says it in Chapter 1 of this book, so here it is: the forged exhibit nobody in
+    Book 1 caught was <strong>Exhibit 9, the Vesper access log</strong>. The line <code>Sat 11/07 14:02:17 gwhitlock … full-weights export</code>
+    put Graham Whitlock in the building on a day he spent in Portland at his mother-in-law's seventieth birthday (Book 1, Chapter 23).
+    And the seconds end in seventeen.</p>
+    <p>Readers who caught it:</p>
+    <ul><li class="note">No names yet. If you caught it, tell us below.</li></ul>
+    <p class="note"><a href="port-halvard.html">Book 1's case file</a></p>
+  </section>
+
+  <section>
+    <h2>Hall of Fame</h2>
+    <p>One of the fourteen exhibits in this book's Case File is a forgery that nobody in Port Halvard ever notices.
+    Find it, tell us which exhibit and what gave it away, and your name goes on the list in Book 3's case file. No prizes, just the honor.</p>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+    <p class="note">Don't post the answer anywhere public; let other readers find it.</p>
+  </section>
+
+  <footer>
+    © 2026 Reena Luiz. <em>The Quiet House</em> is a novel. Names, characters, places and events are fictional.<br>
+    Detective Maren Holt returns in <em>The Borrowed Voice</em>.
+  </footer>
+</div>
+<script>
+  document.querySelectorAll(".vote").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var box = b.parentElement;
+      box.querySelectorAll(".reply").forEach(function (r) { r.hidden = true; });
+      box.querySelectorAll(".vote").forEach(function (o) { o.setAttribute("aria-pressed", "false"); });
+      var r = document.getElementById(b.dataset.target);
+      r.hidden = false;
+      b.setAttribute("aria-pressed", "true");
+      r.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
+</script>
+</body>
+</html>
