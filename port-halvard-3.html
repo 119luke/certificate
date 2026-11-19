@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Port Halvard PD Case File: The Borrowed Voice</title>
+<meta name="description" content="The online case file for The Borrowed Voice, a Detective Maren Holt thriller by Reena Luiz. A work of fiction.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b0f14; --panel: #131a22; --line: #24303c; --text: #d9e2e8; --muted: #8fa3b0; --accent: #E0313A; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
+  .band { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .14em; color: var(--accent); font-size: 15px; margin: 0; }
+  h1, h2 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: .02em; line-height: 1; color: #fff; }
+  h1 { font-size: clamp(44px, 11vw, 76px); margin: 6px 0 4px; }
+  h2 { font-size: 34px; margin: 0 0 10px; }
+  h3 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; color: var(--accent); letter-spacing: .06em; font-size: 20px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 22px; font-style: italic; }
+  .stamp { display: inline-block; border: 2px solid var(--accent); color: var(--accent); padding: 2px 10px;
+            font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .12em; transform: rotate(-2deg); }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 20px; margin: 22px 0; }
+  .warn { border-color: var(--accent); }
+  .vote { display: block; width: 100%; text-align: left; margin: 8px 0; padding: 12px 14px; background: #0e141b; color: var(--text);
+           border: 1px solid var(--line); border-radius: 8px; font: inherit; cursor: pointer; }
+  .vote:hover, .vote[aria-pressed="true"] { border-color: var(--accent); color: #fff; }
+  .reply { margin-top: 14px; padding: 14px 16px; border-left: 3px solid var(--accent); background: #0e141b; }
+  .reply p { margin: 0 0 10px; }
+  .said { font-family: "Bebas Neue", Impact, sans-serif; color: var(--accent); letter-spacing: .08em; font-size: 20px; }
+  figure { margin: 16px 0; }
+  figure img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); display: block; background: #fff; }
+  figure.narrow img { max-width: 380px; margin: 0 auto; }
+  figcaption { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
+  .cta { display: inline-block; margin-top: 12px; background: var(--accent); color: #fff; text-decoration: none;
+          font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .08em; font-size: 22px; padding: 8px 18px; border-radius: 6px; }
+  .cta:hover { background: #fff; color: #1a0506; }
+  .note { color: var(--muted); font-size: 14.5px; }
+  .calls { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+  @media (max-width: 640px) { .calls { grid-template-columns: 1fr; } }
+  .call { background: #0e141b; border: 1px solid var(--line); border-radius: 8px; padding: 12px 12px 4px; min-width: 0; }
+  .tx { font: 13px/1.45 Menlo, Consolas, monospace; margin: 0 0 10px; color: #fff; }
+  .ln { padding-left: 2ch; text-indent: -2ch; margin-bottom: 3px; }
+  .ln b { color: var(--muted); font-weight: 400; }
+  code { font: 14px Menlo, Consolas, monospace; color: #fff; background: #0e141b; padding: 1px 5px; border-radius: 4px; }
+  footer { color: var(--muted); font-size: 13.5px; text-align: center; margin-top: 36px; line-height: 1.7; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="band">Port Halvard Police Department · Case # PHPD-27-01142</p>
+  <h1>The Borrowed Voice</h1>
+  <p class="sub">A Detective Maren Holt Thriller by Reena Luiz · Book 3 · a work of fiction</p>
+  <span class="stamp">Case file · Reader access</span>
+
+  <section class="warn">
+    <h2>Before you go further</h2>
+    <p>This file follows the book. The first vote is for readers who've reached the end of Chapter 21; the second, Chapter 31.
+    Nothing on this page names the killer. Everything here is fiction: Port Halvard, the <em>Halvard Courier</em> and everyone in them are made up.</p>
+  </section>
+
+  <section>
+    <h2>Who is the Artisan?</h2>
+    <p>Somebody built Walt Holt's voice out of thirty years of police radio, and has been selling perfect lies to frightened people for years.
+    Somebody who knew him well enough to talk like him. Who?</p>
+    <button class="vote" data-target="a-artisan-eklund">Gordon Eklund</button>
+<button class="vote" data-target="a-artisan-garrity">Det. Wes Garrity</button>
+<button class="vote" data-target="a-artisan-gail">Gail Sorensen</button>
+<button class="vote" data-target="a-artisan-nick">Nick Petrakis</button>
+<button class="vote" data-target="a-artisan-else">Someone else</button>
+<div class="reply" id="a-artisan-eklund" hidden><p class="said">You said: Gordon Eklund</p><p>Sarada Nair has her sleeves pulled down over her hands and a cold coffee she isn't drinking.</p>
+<p>"I thought that too. At about three in the morning, which is when I think everything." She turns the cup a quarter turn. "He's spent forty years with case tapes. He knows compression better than I ever will. He lied to Maren's face and then looked at his basement door like it had called his name." She stops. "He'd be good enough. That's what scares me. I keep wanting it to be someone who isn't good enough." A small, unhappy smile. "Count the hours, if you get the chance. The model needed a lot of them."</p></div>
+<div class="reply" id="a-artisan-garrity" hidden><p class="said">You said: Det. Wes Garrity</p><p>Rick Haugen unwraps a cough drop and doesn't put it in his mouth.</p>
+<p>"Yeah. I know." He looks at the wrapper. "He sat in on the briefing. He knows about the seventeen. He wrote down <em>she says Ma</em> with his own hand, and he told that family to record. He reads every file in the building. He told us so, like it was cute." He shrugs. "I've had lunch with him. He paid. That's not evidence." He finally eats the cough drop. "It's not nothing, either. Watch who he calls. A guy like that always has somebody he calls."</p></div>
+<div class="reply" id="a-artisan-gail" hidden><p class="said">You said: Gail Sorensen</p><p>Lieutenant Dana Kessler doesn't look up from the report on her desk. The blue Bic in her teeth is chewed flat.</p>
+<p>"The <em>Courier</em> has buried more of my press releases than I've written." She takes the pen out of her mouth. "Two of her sources are dead. She has a key to a building where a girl walked in and didn't walk out. She says the right thing before anyone asks." She sets the pen down, exactly parallel to the edge of the desk. "That's a list. A list isn't a case. And a grudge against a newspaper isn't one either, believe me, I've checked."</p></div>
+<div class="reply" id="a-artisan-nick" hidden><p class="said">You said: Nick Petrakis</p><p>Det. Ron Pelletier cracks a Diet Pepsi and puts his feet up on the lieutenant's wastebasket.</p>
+<p>"I get it. Abby tells the paper she saw Nick come in from the alley. Walt says <em>the Petrakis boy.</em> Nick screams <em>leave 2021 alone</em> in his own kitchen and texts his lawyer the second we walk in." He drinks. "But Nick ran a bar for five years and couldn't fix his own neon sign. You think he built a voice out of thirty years of police radio?" He shakes his head. "Nick knows something. Nick's known something since 2021. Knowing isn't building. Find out what he's scared of, and who."</p></div>
+<div class="reply" id="a-artisan-else" hidden><p class="said">You said: Someone else</p><p>Walt Holt is doing the Jumble in the sunroom at Bethel with a pencil and powdered sugar on his cardigan. He doesn't look up for a while.</p>
+<p>"Somebody else." He writes in a letter, slowly. "Good. Most people stop at the first fella with a reason." He taps the pencil on the paper. "You want the one who knows the words, Mare, not the one who knows the machine. Anybody can buy a machine." He finally looks up, bright and clear for a second. "Watch who brings the coffee. Every time. The one who brings the coffee hears everything." He goes back to his puzzle. "What's a six-letter word for <em>patient</em>?"</p></div>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+  </section>
+
+  <section>
+    <h2>Make your call</h2>
+    <p>Abby Strand called her mother at 6:40 Saturday morning and said <em>Ma</em>. Twenty-five minutes later she was under the ferry dock.
+    Maren thinks she knows who killed her. Do you?</p>
+    <button class="vote" data-target="c-call-ray">Ray Dahlquist</button>
+<button class="vote" data-target="c-call-mason">Mason Tully</button>
+<button class="vote" data-target="c-call-jaylen">Jaylen Ross</button>
+<button class="vote" data-target="c-call-nick">Nick Petrakis</button>
+<button class="vote" data-target="c-call-eklund">Gordon Eklund</button>
+<button class="vote" data-target="c-call-garrity">Det. Wes Garrity</button>
+<button class="vote" data-target="c-call-else">Someone else</button>
+<div class="reply" id="c-call-ray" hidden><p class="said">You said: Ray Dahlquist</p><p>Carol Strand is at her kitchen table with both hands flat on it. The mugs on the drainboard are upside down in a row.</p>
+<p>"Ray told me to hang up." She says it to the table. "He had a reason, I know he had a reason, I could hear it in his voice that morning and I didn't want to hear it. He carried the bag. He counted the money in the truck, I think. I think about that." She is quiet for a long time. "I've been with him six years. I can't tell you. I've sat here every night this week trying to pick, and I can't. That's my answer. I'm sorry. That's all of it."</p></div>
+<div class="reply" id="c-call-mason" hidden><p class="said">You said: Mason Tully</p><p>Sarada Nair has the laptop closed on her knees and doesn't open it.</p>
+<p>"He has forty hours of her voice. He built a copy of her out of three years of texts. He lied about Thursday. He lives two blocks from the water and nobody saw him all Friday night." She pushes her glasses up. "And he was on the air at 6:40 Saturday, with two people watching him read the tide table." A pause. "The bot says Ma. It says it because she wrote it, a thousand times. Sit with that for a minute. Then ask yourself what else learned it from her."</p></div>
+<div class="reply" id="c-call-jaylen" hidden><p class="said">You said: Jaylen Ross</p><p>Special Agent Paul Corrigan is in his cardigan, in a hallway with a vending machine, looking at his phone.</p>
+<p>"Case closed, ma'am. Thank you for playing." He doesn't smile. "That's what the chief would like me to say, and I said a version of it at a podium last night." He puts the phone away. "Here's what I'd say off the record. He had the money. He lied about the bag. His phone was at the dock. He's also nineteen, and somebody wrote that job for a boy exactly like him." He looks down the hall. "Pairs of hands always know a little less than you hope."</p></div>
+<div class="reply" id="c-call-nick" hidden><p class="said">You said: Nick Petrakis</p><p>Travis Ward is under a log truck. Only his boots are showing.</p>
+<p>"Nick yelled at her. Nick yelled at me too, back then, everybody yelled at me." His voice comes out flat off the oil pan. "It's his bar. His back hall. His brother. He's had a lawyer since February and he's never once said what he saw in 2021." A wrench clanks. "I want it to be him, kind of. That'd be simple." He slides out on the creeper and sits up, wiping his hands. "But I stood in that bar a lot of nights. Nick was always behind the counter. It was the back hall you had to watch."</p></div>
+<div class="reply" id="c-call-eklund" hidden><p class="said">You said: Gordon Eklund</p><p>Lieutenant Dana Kessler stands at the top of a basement staircase in University Place, looking down at eight rows of steel shelves.</p>
+<p>"I said it out loud. In his kitchen. <em>We have the Artisan.</em>" She takes the blue Bic out of her teeth. "A man who can fake anything, who lied about meeting her, who swings a leg, who has Walt Holt on a shelf with a label on it. If you put that in front of a jury they'd go home early." She looks at the pen. "And then my analyst counted the hours and told me it wasn't enough, and she's never been wrong in front of me yet. Which is annoying."</p></div>
+<div class="reply" id="c-call-garrity" hidden><p class="said">You said: Det. Wes Garrity</p><p>Rick Haugen is sitting on the edge of a desk in the homicide room at midnight, with a coffee he's stopped drinking.</p>
+<p>"He's a jerk. I've arrested jerks. It's never as satisfying as you'd think." He rubs his eyes. "He knew about the seventeen. He wrote down <em>Ma.</em> He was on Harbor Street at 10:22 and he lied about the pho." He shakes his head slowly. "I like him. I'm sorry, I do." He sets the cup down. "But Maren's right about one thing. He talks to somebody. He always has. The question was never what Wes knew. It's who he told."</p></div>
+<div class="reply" id="c-call-else" hidden><p class="said">You said: Someone else</p><p>Walt Holt has the Jumble on his knee in the sunroom at Bethel, and a pencil behind his ear.</p>
+<p>"Somebody else." He nods, as if that settles it. "Good. That's a cop's answer, Mare." He writes a letter, erases it. "You know the trick, don't you? Everybody looks at the fella who's out of place. The stranger. The kid. The one with the record." He taps the pencil on the paper. "The one you'd never check is the one who's always there. Brings the coffee. Holds the door. Knows your name." He smiles at the window. "Six letters. <em>Loyal.</em> No. That's five."</p></div>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+  </section>
+
+  <section>
+    <h2>Two calls. Which voice is real?</h2>
+    <p>Thursday afternoon, a man on Carol Strand's phone tells her where to leave the money. Saturday at dawn, her daughter's voice says
+    <em>Ma</em>. Here are both, as Financial Crimes typed them up.</p>
+    <div class="calls">
+      <div class="call"><h3>Call 1 · Thu 03/04 · Exhibit 2</h3><div class="tx"><div class="ln"><b>[00:00]</b> [car interior, rain on roof, indicator ticking]</div>
+<div class="ln"><b>MAN:</b> ...the money in the bag now.</div>
+<div class="ln"><b>CAROL:</b> I have it. I have it, it&#x27;s in the bag, I&#x27;m back in the car.</div>
+<div class="ln"><b>MAN:</b> You have the money in the bag now. You put the bag in the trash can at the shelter. Pacific and Thirty-Eighth. You walk away. You don&#x27;t look back.</div>
+<div class="ln"><b>CAROL:</b> Okay.</div>
+<div class="ln"><b>MAN:</b> You go home and you wait and she comes home.</div>
+<div class="ln"><b>CAROL:</b> Can I talk to her? Please let me talk to her.</div>
+<div class="ln"><b>MAN:</b> She&#x27;s resting. You&#x27;ll talk to her tonight. Five-thirty, Carol. [pause, 2 sec]</div>
+<div class="ln"><b>MAN:</b> If we see one police car, Carol, you don&#x27;t see her again.</div>
+<div class="ln"><b>CAROL:</b> Okay. Okay. Okay.</div>
+<div class="ln"><b>[00:58]</b> [call ends]</div></div></div>
+      <div class="call"><h3>Call 2 · Sat 03/06 · Exhibit 4</h3><div class="tx"><div class="ln"><b>[00:00]</b> [rain, close] [breath]</div>
+<div class="ln"><b>VOICE:</b> Ma.</div>
+<div class="ln"><b>VOICE:</b> They came back. Please.</div>
+<div class="ln"><b>VOICE:</b> They said you didn&#x27;t pay all of it.</div>
+<div class="ln"><b>[00:06]</b> RAY (distant): Carol, it&#x27;s them again, it&#x27;s them, hang up.</div>
+<div class="ln"><b>[00:09]</b> [call ends, by recipient]</div></div></div>
+    </div>
+    <p class="note">Carrier note under Call 2: the call did not come from Abby's line, and her handset had not touched the network since Friday at 10:31 p.m.</p>
+    <figure>
+      <img src="phpd3/audio-memo.jpg" alt="Three stacked audio panels: Call 1 with evenly spaced tick marks labeled 17 ms, Call 2 with none, and a frequency plot where a cloned voice stops sharply at 3,000 hertz" loading="lazy">
+      <figcaption>Exhibit 5. Sarada's audio memo, page 1. Call 1 has the seventeen. Call 2 doesn't.</figcaption>
+    </figure>
+    <p>So which voice belonged to a real person?</p>
+    <button class="vote" data-target="v-call1">Call 1, Thursday</button>
+<button class="vote" data-target="v-call2">Call 2, Saturday</button>
+<button class="vote" data-target="v-both">Both are real</button>
+<button class="vote" data-target="v-neither">Neither is real</button>
+<div class="reply" id="v-call1" hidden><p class="said">You said: Call 1, Thursday</p><p>Sarada already settled Thursday's man: a clock ticking under his voice every 17 milliseconds. Nobody heard the daughter on Call 1; Ray started recording too late. All you have is Carol's word for how she sounded.</p></div>
+<div class="reply" id="v-call2" hidden><p class="said">You said: Call 2, Saturday</p><p>Carol knew her daughter's voice for twenty-four years, and she heard <em>Ma</em>. Sarada found no seventeen in it. Before you settle on that, put the headphones on the way she does: stop listening to the girl and listen to everything around her.</p></div>
+<div class="reply" id="v-both" hidden><p class="said">You said: Both are real</p><p>Then somebody really was holding Abby Strand twice in three days, and Carol's money bought her an hour. Check the carrier's note under Call 2 again, and ask how a handset that went dark on Friday night made a call on Saturday morning.</p></div>
+<div class="reply" id="v-neither" hidden><p class="said">You said: Neither is real</p><p>Then you've stopped trusting your ears, which is where Sarada lives. If neither call is real, ask what the second one was <em>for</em>.</p></div>
+    <p class="note">Chapter 32 answers it. No peeking from the end.</p>
+  </section>
+
+  <section>
+    <h2>The reporter's notebook</h2>
+    <figure class="narrow">
+      <img src="phpd3/notebook.jpg" alt="A narrow reporter's notebook page in fast slanting shorthand, with a box around the last line" loading="lazy">
+      <figcaption>Exhibit 6. Notes from a tip-line callback, Tuesday, March 2, about 4:15 p.m. Four days before the ferry dock.
+      Who did the caller say she saw, and who wrote it down?</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Book 2's hidden fake</h2>
+    <p>If you've read <em>The Quiet House</em>, Sarada proves it in Chapter 2 of this book, so here it is: the forged exhibit nobody in
+    Book 2 caught was <strong>Exhibit 13, the photocopied property-room log page</strong> mailed to Internal Affairs. The line
+    <code>10/26/21 13:40:17 OUT HOLT, M.</code> doesn't exist in the real book in the Kent records center, and that afternoon Maren was in
+    Tacoma at her father's neurologist appointment. And the seconds end in seventeen.</p>
+    <p>Readers who caught it:</p>
+    <ul><li class="note">No names yet. If you caught it, tell us below.</li></ul>
+    <p class="note"><a href="port-halvard.html">Book 1's case file</a> · <a href="port-halvard-2.html">Book 2's case file</a></p>
+  </section>
+
+  <section>
+    <h2>Hall of Fame</h2>
+    <p>One of the fourteen exhibits in this book's Case File is a forgery that nobody in Port Halvard ever notices.
+    Find it, tell us which exhibit and what gave it away, and your name goes on the list in Book 4's case file. No prizes, just the honor.</p>
+    <p class="note">Official voting opens when the book comes out. Real numbers only, posted by hand.</p>
+    <p class="note">Don't post the answer anywhere public; let other readers find it.</p>
+  </section>
+
+  <footer>
+    © 2026 Reena Luiz. <em>The Borrowed Voice</em> is a novel. Names, characters, places and events are fictional.<br>
+    Detective Maren Holt returns in <em>The Only Witness</em>.
+  </footer>
+</div>
+<script>
+  document.querySelectorAll(".vote").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var box = b.parentElement;
+      box.querySelectorAll(".reply").forEach(function (r) { r.hidden = true; });
+      box.querySelectorAll(".vote").forEach(function (o) { o.setAttribute("aria-pressed", "false"); });
+      var r = document.getElementById(b.dataset.target);
+      r.hidden = false;
+      b.setAttribute("aria-pressed", "true");
+      r.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
+</script>
+</body>
+</html>
