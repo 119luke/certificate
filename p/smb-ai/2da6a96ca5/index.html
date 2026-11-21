@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>How to separate business and personal spending | The Best AI for Small Business Owners</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Job 127</p>
+  <h1>How to separate business and personal spending</h1>
+  <p class="section">Your Time, Admin and Paperwork · The Best AI for Small Business Owners</p>
+  <p class="best"><b>Best AI for this job:</b> 1. Claude · 2. Gemini · 3. Grok Bot</p>
+  <div class="prompt" id="prompt">Here are statements from accounts and cards where I&#x27;ve mixed business and personal spending: [attach]. Sort every transaction into business, personal or unclear, ask me about the unclear ones, and build two lists for my accountant: business expenses paid personally and personal expenses paid by the business. Then suggest simple rules to keep them separate.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into Claude, Gemini, Grok Bot, Dots or Muse, then swap the [brackets] for your own details.</p>
+</main>
+<p class="foot">From <em>The Best AI for Small Business Owners</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>

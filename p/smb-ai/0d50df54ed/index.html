@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>How to turn receipts into an accountant-ready expense log | The Best AI for Small Business Owners</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Job 7</p>
+  <h1>How to turn receipts into an accountant-ready expense log</h1>
+  <p class="section">The 10 Questions Small Business Owners Ask Google Most · The Best AI for Small Business Owners</p>
+  <p class="best"><b>Best AI for this job:</b> 1. Grok Bot · 2. Gemini · 3. Claude</p>
+  <div class="prompt" id="prompt">Every time I send you a receipt, read the vendor, date, amount, payment method and what was bought, add the business purpose I give you and a link to the receipt file, and add it to my expense spreadsheet with a category from this list: [supplies, advertising, vehicle, meals, software, rent, utilities, other]. Flag equipment, inventory and anything over [$ amount] for my accountant. At the end of each month, send me a summary by category and a list of any receipts you weren&#x27;t sure about. Don&#x27;t guess a category; ask me.</div>
+  <button id="copy" type="button">Copy prompt</button>
+  <p class="hint">Paste it into Claude, Gemini, Grok Bot, Dots or Muse, then swap the [brackets] for your own details.</p>
+</main>
+<p class="foot">From <em>The Best AI for Small Business Owners</em></p>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var src = document.getElementById('prompt');
+  btn.addEventListener('click', function () {
+    var text = src.textContent;
+    function ok() {
+      btn.textContent = 'Copied \u2713';
+      btn.className = 'done';
+      setTimeout(function () { btn.textContent = 'Copy prompt'; btn.className = ''; }, 2200);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      try { document.execCommand('copy'); ok(); }
+      catch (e) { btn.textContent = 'Select the text above to copy'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b34868d1741b44ac98aef85f1da471b9"}'></script>
+</body>
+</html>
